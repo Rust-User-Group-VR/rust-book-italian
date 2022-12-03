@@ -1,6 +1,6 @@
-# The Rust Programming Language
+# Linguaggio Di Programmazione Rust
 
-[The Rust Programming Language](title-page.md)
+[Linguaggio Di Programmazione Rust](title-page.md)
 [Prefazione](foreword.md)
 [Introduzione](ch00-00-introduction.md)
 
@@ -102,34 +102,34 @@
     - [Concorrenza estensibile con i tratti `Sync` e `Send`.](ch16-04-extensible-concurrency-sync-and-send.md)
 
 - [Caratteristiche della Programmazione Orientata agli oggetti di Rust](ch17-00-oop.md)
-    - [Characteristics of Object-Oriented Languages](ch17-01-what-is-oo.md)
-    - [Using Trait Objects That Allow for Values of Different Types](ch17-02-trait-objects.md)
-    - [Implementing an Object-Oriented Design Pattern](ch17-03-oo-design-patterns.md)
+    - [Caratteristiche dei linguaggi orientati agli oggetti](ch17-01-what-is-oo.md)
+    - [Utilizzo di oggetti Trait che consentono valori di tipi diversi](ch17-02-trait-objects.md)
+    - [Implementre un modello di progettazione orientato agli oggetti](ch17-03-oo-design-patterns.md)
 
-## Advanced Topics
+## Temi Avanzati
 
-- [Patterns and Matching](ch18-00-patterns.md)
-    - [All the Places Patterns Can Be Used](ch18-01-all-the-places-for-patterns.md)
-    - [Refutability: Whether a Pattern Might Fail to Match](ch18-02-refutability.md)
-    - [Pattern Syntax](ch18-03-pattern-syntax.md)
+- [Pattern e Matching](ch18-00-patterns.md)
+    - [Tutti i luoghi dove si possono usare i Pattern](ch18-01-all-the-places-for-patterns.md)
+    - [Refutability: in caso un modello non corrisponda](ch18-02-refutability.md)
+    - [Sintassi Pattern](ch18-03-pattern-syntax.md)
 
-- [Advanced Features](ch19-00-advanced-features.md)
-    - [Unsafe Rust](ch19-01-unsafe-rust.md)
-    - [Advanced Traits](ch19-03-advanced-traits.md)
-    - [Advanced Types](ch19-04-advanced-types.md)
-    - [Advanced Functions and Closures](ch19-05-advanced-functions-and-closures.md)
+- [Funzionalità Avanzate](ch19-00-advanced-features.md)
+    - [Rust non sicuro](ch19-01-unsafe-rust.md)
+    - [Tratti avanzati](ch19-03-advanced-traits.md)
+    - [Tipi di dati avanzati](ch19-04-advanced-types.md)
+    - [Funzioni e Closures avanzate](ch19-05-advanced-functions-and-closures.md)
     - [Macros](ch19-06-macros.md)
 
-- [Final Project: Building a Multithreaded Web Server](ch20-00-final-project-a-web-server.md)
-    - [Building a Single-Threaded Web Server](ch20-01-single-threaded.md)
-    - [Turning Our Single-Threaded Server into a Multithreaded Server](ch20-02-multithreaded.md)
-    - [Graceful Shutdown and Cleanup](ch20-03-graceful-shutdown-and-cleanup.md)
+- [Progetto finale: creare un server Web multithread](ch20-00-final-project-a-web-server.md)
+    - [Creazione di un server Web mono-thread](ch20-01-single-threaded.md)
+    - [Trasformare il nostro server mono-thread in un server multithread](ch20-02-multithreaded.md)
+    - [Arresto e pulizia appropriati](ch20-03-graceful-shutdown-and-cleanup.md)
 
-- [Appendix](appendix-00.md)
-    - [A - Keywords](appendix-01-keywords.md)
-    - [B - Operators and Symbols](appendix-02-operators.md)
-    - [C - Derivable Traits](appendix-03-derivable-traits.md)
-    - [D - Useful Development Tools](appendix-04-useful-development-tools.md)
-    - [E - Editions](appendix-05-editions.md)
-    - [F - Translations of the Book](appendix-06-translation.md)
-    - [G - How Rust is Made and “Nightly Rust”](appendix-07-nightly-rust.md)
+- [Appendice](appendix-00.md)
+    - [A - Parole chiave](appendix-01-keywords.md)
+    - [B - Operatori e simboli](appendix-02-operators.md)
+    - [C - Tratti derivabili](appendix-03-derivable-traits.md)
+    - [D - Strumenti di sviluppo utili](appendix-04-useful-development-tools.md)
+    - [E - Edizioni](appendix-05-editions.md)
+    - [F - Traduzioni del libro](appendix-06-translation.md)
+    - [G - Come è fatto Rust e “Nightly Rust”](appendix-07-nightly-rust.md)
