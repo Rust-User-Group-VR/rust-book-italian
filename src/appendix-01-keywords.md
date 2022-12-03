@@ -1,13 +1,12 @@
 ## Appendice A: Parole Chiave
 
-Il seguente elenco contiene le parole chiave riservate per attuali o futuri utilizzi del linguaggio Rust. In quanto tali, non possono essere utilizzati come identificatori (except
-as raw identifiers as we’ll discuss in the “[Identificatori Grezzi][identificatori-grezzi]<!-- ignore -->” section). Gli identificatori sono nomi
+Il seguente elenco contiene le parole chiave riservate per attuali o futuri utilizzi del linguaggio Rust. In quanto tali, non possono essere utilizzati come identificatori (tranne che come identificatori grezzi come discuteremo nella sezione “[Identificatori Grezzi][identificatori-grezzi]<!-- ignore -->”). Gli identificatori sono nomi
 di funzioni, variabili, parametri, campi di struct, moduli, crates, costanti,
 macro, valori static, attributi, tipi, tratti o lifetimes.
 
 [identificatori-grezzi]: #identificatori-grezzi
 
-### Keywords Currently in Use
+### Parole chiave attualmente in uso
 
 Di seguito è riportato un elenco di parole chiave attualmente in uso, descritte con le relative funzionalità.
 
@@ -77,11 +76,10 @@ Rust per un potenziale uso futuro.
 
 ### Identificatori Grezzi
 
-*Raw identifiers* are the syntax that lets you use keywords where they wouldn’t
-normally be allowed. You use a raw identifier by prefixing a keyword with `r#`.
+Gli *identificatori grezzi* sono la sintassi che ti consente di utilizzare le parole chiave dove di norma non sarebbe consentito. Si utilizza un identificatore grezzo anteponendo ad una parola chiave `r#`.
 
-For example, `match` is a keyword. If you try to compile the following function
-that uses `match` as its name:
+Ad esempio, `match` è una parola chiave. Se provi a compilare la seguente funzione
+che usa `match` come nome:
 
 <span class="filename">Filename: src/main.rs</span>
 
@@ -91,7 +89,7 @@ fn match(needle: &str, haystack: &str) -> bool {
 }
 ```
 
-you’ll get this error:
+apparirà questo errore:
 
 ```text
 error: expected identifier, found keyword `match`
@@ -101,9 +99,8 @@ error: expected identifier, found keyword `match`
   |    ^^^^^ expected identifier, found keyword
 ```
 
-The error shows that you can’t use the keyword `match` as the function
-identifier. To use `match` as a function name, you need to use the raw
-identifier syntax, like this:
+L'errore dice che non puoi utilizzare la parola chiave `match` come funzione
+identificatore. Per usare `match` come nome di una funzione, devi usare la sintassi dell'identificatore, così:
 
 <span class="filename">Filename: src/main.rs</span>
 
@@ -117,18 +114,17 @@ fn main() {
 }
 ```
 
-This code will compile without any errors. Note the `r#` prefix on the function
-name in its definition as well as where the function is called in `main`.
+Questo codice verrà compilato senza errori. Nota il prefisso `r#` sulla funzione
+name nella sua definizione e dove la funzione viene chiamata in `main`.
 
-Raw identifiers allow you to use any word you choose as an identifier, even if
-that word happens to be a reserved keyword. This gives us more freedom to
-choose identifier names, as well as lets us integrate with programs written in
-a language where these words aren’t keywords. In addition, raw identifiers
-allow you to use libraries written in a different Rust edition than your crate
-uses. For example, `try` isn’t a keyword in the 2015 edition but is in the 2018
-edition. If you depend on a library that’s written using the 2015 edition and
-has a `try` function, you’ll need to use the raw identifier syntax, `r#try` in
-this case, to call that function from your 2018 edition code. See [Appendix
+Gli identificatori grezzi ti consentono di utilizzare qualsiasi parola tu scelga come identificatore, anche se
+quella parola sembra essere una parola chiave riservata. Questo ci dà più libertà di
+scegliere i nomi degli identificatori, oltre a permetterci di integrarci con i programmi scritti
+una lingua in cui queste parole non sono parole chiave. Inoltre, gli identificatori grezzi
+ti permettono di usare librerie scritte in un'edizione di Rust diversa da quella che il tuo crate
+utilizza. Ad esempio, `try` non è una parola chiave nell'edizione 2015 ma è nell'edizione 2018. Se dipendi da una libreria scritta utilizzando l'edizione 2015 e
+ha una funzione `try`, dovrai usare la sintassi dell'identificatore grezzo, `r#try` in
+in questo caso, per chiamare quella funzione dal codice dell'edizione 2018. Vedi [Appendice
 E][appendix-e]<!-- ignore --> for more information on editions.
 
-[appendix-e]: appendix-05-editions.html
+[appendix-e]: appendix-05-editions.md
