@@ -1,68 +1,65 @@
-## Appendix A: Keywords
+## Appendice A: Parole Chiave
 
-The following list contains keywords that are reserved for current or future
-use by the Rust language. As such, they cannot be used as identifiers (except
-as raw identifiers as we’ll discuss in the “[Raw
-Identifiers][raw-identifiers]<!-- ignore -->” section). Identifiers are names
-of functions, variables, parameters, struct fields, modules, crates, constants,
-macros, static values, attributes, types, traits, or lifetimes.
+Il seguente elenco contiene le parole chiave riservate per attuali o futuri utilizzi del linguaggio Rust. In quanto tali, non possono essere utilizzati come identificatori (except
+as raw identifiers as we’ll discuss in the “[Identificatori-Grezzi][Identificatori-Grezzi]<!-- ignore -->” section). Gli identificatori sono nomi
+di funzioni, variabili, parametri, campi di struct, moduli, crates, costanti,
+macro, valori static, attributi, tipi, tratti o lifetimes.
 
-[raw-identifiers]: #raw-identifiers
+[raw-identifiers]: #Identificatori-Grezzi
 
 ### Keywords Currently in Use
 
-The following is a list of keywords currently in use, with their functionality
-described.
+Di seguito è riportato un elenco di parole chiave attualmente in uso, descritte con le relative funzionalità.
 
-* `as` - perform primitive casting, disambiguate the specific trait containing
-  an item, or rename items in `use` statements
-* `async` -  return a `Future` instead of blocking the current thread
-* `await` - suspend execution until the result of a `Future` is ready
-* `break` - exit a loop immediately
-* `const` - define constant items or constant raw pointers
-* `continue` - continue to the next loop iteration
-* `crate` - in a module path, refers to the crate root
-* `dyn` - dynamic dispatch to a trait object
-* `else` - fallback for `if` and `if let` control flow constructs
-* `enum` - define an enumeration
-* `extern` - link an external function or variable
-* `false` - Boolean false literal
-* `fn` - define a function or the function pointer type
-* `for` - loop over items from an iterator, implement a trait, or specify a
-  higher-ranked lifetime
-* `if` - branch based on the result of a conditional expression
-* `impl` - implement inherent or trait functionality
-* `in` - part of `for` loop syntax
-* `let` - bind a variable
-* `loop` - loop unconditionally
-* `match` - match a value to patterns
-* `mod` - define a module
-* `move` - make a closure take ownership of all its captures
-* `mut` - denote mutability in references, raw pointers, or pattern bindings
-* `pub` - denote public visibility in struct fields, `impl` blocks, or modules
-* `ref` - bind by reference
-* `return` - return from function
-* `Self` - a type alias for the type we are defining or implementing
-* `self` - method subject or current module
-* `static` - global variable or lifetime lasting the entire program execution
-* `struct` - define a structure
-* `super` - parent module of the current module
-* `trait` - define a trait
-* `true` - Boolean true literal
-* `type` - define a type alias or associated type
-* `union` - define a [union][union]<!-- ignore -->; is only a keyword when used
-  in a union declaration
-* `unsafe` - denote unsafe code, functions, traits, or implementations
-* `use` - bring symbols into scope
-* `where` - denote clauses that constrain a type
-* `while` - loop conditionally based on the result of an expression
+* `as` - esegue il casting primitivo, disambigua il tratto specifico che contiene
+  un elemento o rinomina gli elementi nelle istruzioni `use`
+* `async` -  restituisce un `Future` invece di bloccare il thread corrente
+* `await` - sospendere l'esecuzione fino a quando il risultato di un `Future` non è pronto
+* `break` - esce da un ciclo immediatamente
+* `const` - definisce elementi costanti o puntatori grezzi costanti
+* `continue` - continua alla successiva iterazione del ciclo
+* `crate` - in un percorso del modulo, fa riferimento al root della crate
+* `dyn` - invio dinamico a un oggetto di tipo tratto
+* `else` - fallback per i costrutti di control flow `if` e `if let`
+* `enum` - definisce un'enumerazione
+* `extern` - collega una funzione esterna o una variabile
+* `false` - valore Booleano falso
+* `fn` - definisce una funzione o il tipo di puntatore di funzione
+* `for` - esegue il ciclo sugli elementi di un iteratore, implementa un tratto o specifica la
+  durata di rango superiore
+* `if` - branch basato sul risultato di un'espressione condizionale
+* `impl` - implementa funzionalità intrinseche o di tratto
+* `in` - parte della sintassi del ciclo `for`
+* `let` - associa un valore a una variabile.
+* `loop` - ciclo incondizionato
+* `match` - abbinare un valore ai pattern
+* `mod` - definisce un modulo
+* `move` - fa in modo che una closure si impossessi di tutte le sue catture
+* `mut` - denota la mutabilità in references, puntatori grezzi o associazioni di pattern
+* `pub` - denota la visibilità pubblica nei campi struct, nei blocchi `impl` o nei moduli
+* `ref` - vincola per riferimento
+* `return` - restituzione da una funzione
+* `Self` - un alias di tipo per il tipo che stiamo definendo o implementando
+* `self` - argomento del metodo o modulo corrente
+* `static` - variabile globale o ciclo di vita che dura l'intera esecuzione del programma
+* `struct` - definisce una struttura
+* `super` - modulo padre del modulo corrente
+* `trait` - definisce un tratto
+* `true` - valore Booleano vero
+* `type` - definisce un alias di tipo o un tipo associato
+* `union` - definisce una [unione][union]<!-- ignore -->; è solo una parola chiave quando viene utilizzata
+  in una dichiarazione di tipo union
+* `unsafe` - denota codice, funzioni, tratti o implementazioni come non sicuri
+* `use` - porta i simboli dentro lo scope
+* `where` - denota clausole che vincolano un tipo
+* `while` - ciclo condizionale in base al risultato di un'espressione
 
 [union]: ../reference/items/unions.html
 
-### Keywords Reserved for Future Use
+### Parole chiave riservate per uso futuro
 
-The following keywords do not yet have any functionality but are reserved by
-Rust for potential future use.
+Le seguenti parole chiave non hanno ancora alcuna funzionalità ma sono riservate da
+Rust per un potenziale uso futuro.
 
 * `abstract`
 * `become`
@@ -78,7 +75,7 @@ Rust for potential future use.
 * `virtual`
 * `yield`
 
-### Raw Identifiers
+### Identificatori-Grezzi
 
 *Raw identifiers* are the syntax that lets you use keywords where they wouldn’t
 normally be allowed. You use a raw identifier by prefixing a keyword with `r#`.
