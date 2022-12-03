@@ -1,11 +1,11 @@
 ## Appendice A: Parole Chiave
 
 Il seguente elenco contiene le parole chiave riservate per attuali o futuri utilizzi del linguaggio Rust. In quanto tali, non possono essere utilizzati come identificatori (except
-as raw identifiers as we’ll discuss in the “[Identificatori-Grezzi][Identificatori-Grezzi]<!-- ignore -->” section). Gli identificatori sono nomi
+as raw identifiers as we’ll discuss in the “[Identificatori Grezzi][identificatori-grezzi]<!-- ignore -->” section). Gli identificatori sono nomi
 di funzioni, variabili, parametri, campi di struct, moduli, crates, costanti,
 macro, valori static, attributi, tipi, tratti o lifetimes.
 
-[raw-identifiers]: #Identificatori-Grezzi
+[identificatori-grezzi]: #identificatori-grezzi
 
 ### Keywords Currently in Use
 
@@ -75,7 +75,7 @@ Rust per un potenziale uso futuro.
 * `virtual`
 * `yield`
 
-### Identificatori-Grezzi
+### Identificatori Grezzi
 
 *Raw identifiers* are the syntax that lets you use keywords where they wouldn’t
 normally be allowed. You use a raw identifier by prefixing a keyword with `r#`.
