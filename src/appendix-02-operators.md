@@ -1,16 +1,42 @@
 ## Appendix B: Operators and Symbols
+<!---
+Appendice B: Operatori e Simboli
+-->
 
 This appendix contains a glossary of Rust’s syntax, including operators and
 other symbols that appear by themselves or in the context of paths, generics,
 trait bounds, macros, attributes, comments, tuples, and brackets.
 
+<!---
+Questa appendice contiene un glossario della sintassi di Rust, inclusi gli operatori e
+altri simboli che compaiono da soli o nel contesto di percorsi, generici,
+limiti di tratto, macro, attributi, commenti, tuple e parentesi.
+
+- Corretta
+-->
+
 ### Operators
+
+<!-- Operatori 
+- Corretta
+-->
 
 Table B-1 contains the operators in Rust, an example of how the operator would
 appear in context, a short explanation, and whether that operator is
 overloadable. If an operator is overloadable, the relevant trait to use to
 overload that operator is listed.
 
+<!-- La tabella B-1 contiene gli operatori in Rust, un esempio di come lo farebbe l'operatore
+appaiono nel contesto, una breve spiegazione e se tale operatore lo è
+sovraccarico. Se un operatore è in grado di eseguire l'overload, il tratto pertinente da utilizzare per
+sovraccarico quell'operatore è elencato. 
+
+|
+|
+|
+
+La tabella B-1 contiene gli operatori in Rust, un esempio di come apparirebbe un operatore in un contesto, una breve spiegazione e se tale operatore è overloadable. Se un operatore è overloadable, il tratto pertinente da utilizzare per l'overloading di quell'operatore è elencato. 
+-->
 <span class="caption">Table B-1: Operators</span>
 
 | Operator | Example | Explanation | Overloadable? |
@@ -70,7 +96,77 @@ overload that operator is listed.
 | <code>&vert;&vert;</code> | <code>expr &vert;&vert; expr</code> | Short-circuiting logical OR | |
 | `?` | `expr?` | Error propagation | |
 
+<!-- <span class="caption">Tabella B-1: Operatori</span>
+
+| Operatore | Esempio | Spiegazione | Overloadable? |
+|----------|---------|-------------|---------------|
+| `!` | `ident!(...)`, `ident!{...}`, `ident![...]` | Macro espansione | |
+| `!` | `!expr` | Complemento bit per bit o logico | `Not` |
+| `!=` | `expr != expr` | Confronto disuguaglianza | `PartialEq` |
+| `%` | `expr % expr` | Resto Aritmetico| `Rem` |
+| `%=` | `var %= expr` | Resto aritmetico e assegnamento | `RemAssign` |
+| `&` | `&expr`, `&mut expr` | Prestito | |
+| `&` | `&type`, `&mut type`, `&'a type`, `&'a mut type` | Tipo di puntatore preso in prestito | |
+| `&` | `expr & expr` | Bitwise AND | `BitAnd` |
+| `&=` | `var &= expr` | Bitwise AND ed assgnamento | `BitAndAssign` |
+| `&&` | `expr && expr` | AND Logico Short-circuiting | |
+| `*` | `expr * expr` | Moltiplicazione aritmetica | `Mul` |
+| `*=` | `var *= expr` | Moltiplicazione aritmetica ed assegnamento | `MulAssign` |
+| `*` | `*expr` | Dereferenziazione | `Deref` |
+| `*` | `*const type`, `*mut type` | Puntatore grezzo | |
+| `+` | `trait + trait`, `'a + trait` | Vincolo di tipo composto| |
+| `+` | `expr + expr` | Addizione aritmetica | `Add` |
+| `+=` | `var += expr` | Addizione aritmetica ed assegnazione | `AddAssign` |
+| `,` | `expr, expr` | Separatore di argomenti ed elementi | |
+| `-` | `- expr` | Negazione aritmetica | `Neg` |
+| `-` | `expr - expr` | Sottrazione aritmetica | `Sub` |
+| `-=` | `var -= expr` | Sottrazione aritmetica ed assegnazione | `SubAssign` |
+| `->` | `fn(...) -> type`, <code>&vert;...&vert; -> type</code> | Funzione e tipo di return di chiusura | |
+| `.` | `expr.ident` | Accesso membri | |
+| `..` | `..`, `expr..`, `..expr`, `expr..expr` | Valore letterale dell'intervallo esclusivo a destra | `PartialOrd` |
+| `..=` | `..=expr`, `expr..=expr` | Intervallo letterale inclusivo a destra | `PartialOrd` |
+| `..` | `..expr` | Sintassi di aggiornamento letterale della struttura | |
+| `..` | `variant(x, ..)`, `struct_type { x, .. }` | “Ed il resto” pattern binding | |
+| `...` | `expr...expr` | (Deprecato, usa invece `..=`) In un pattern: pattern di intervallo inclusivo | |
+| `/` | `expr / expr` | Divisione aritmetica| `Div` |
+| `/=` | `var /= expr` | Divisione aritmetica ed assegnazione | `DivAssign` |
+| `:` | `pat: type`, `ident: type` | Vincoli | |
+| `:` | `ident: expr` | Inizializzatore di campo struct | |
+| `:` | `'a: loop {...}` | Loop label | |
+| `;` | `expr;` | Terminatore di istruzioni e articoli | |
+| `;` | `[...; len]` | Parte della sintassi di array a dimensione fissa| |
+| `<<` | `expr << expr` | Shift sinistro | `Shl` |
+| `<<=` | `var <<= expr` | Shift sinistro ed assegnazione | `ShlAssign` |
+| `<` | `expr < expr` | Confronto minore di| `PartialOrd` |
+| `<=` | `expr <= expr` | Confronto minore o uguale | `PartialOrd` |
+| `=` | `var = expr`, `ident = type` | Assegnazione/Equivalenza | |
+| `==` | `expr == expr` | Confronto di equalità | `PartialEq` |
+| `=>` | `pat => expr` | Part of match arm syntax | |
+| `>` | `expr > expr` | Confronto maggiore di | `PartialOrd` |
+| `>=` | `expr >= expr` |  Confronto maggiore o uguale di | `PartialOrd` |
+| `>>` | `expr >> expr` | Shift destro | `Shr` |
+| `>>=` | `var >>= expr` | Shift destro ed assegnazione | `ShrAssign` |
+| `@` | `ident @ pat` | Pattern binding | |
+| `^` | `expr ^ expr` | Bitwise OR Esclusivo | `BitXor` |
+| `^=` | `var ^= expr` | Bitwise OR Esclusivo ed assegnazione | `BitXorAssign` |
+| <code>&vert;</code> | <code>pat &vert; pat</code> | Pattern alternativi | |
+| <code>&vert;</code> | <code>expr &vert; expr</code> | Bitwise OR | `BitOr` |
+| <code>&vert;=</code> | <code>var &vert;= expr</code> | Bitwise OR ed assegnazione | `BitOrAssign` |
+| <code>&vert;&vert;</code> | <code>expr &vert;&vert; expr</code> | OR logico Short-circuiting | |
+| `?` | `expr?` | Propagazione dell'errore | | 
+
+
+
+
+----------------------- 
+DA TRADURRE 
+RIGA 136 : Loop Label
+RIGA 145 :Part of match arm syntax
+-----------------------------
+-->
+
 ### Non-operator Symbols
+<!-- ### Simboli non operatori -->
 
 The following list contains all symbols that don’t function as operators; that
 is, they don’t behave like a function or method call.
